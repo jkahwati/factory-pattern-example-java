@@ -12,10 +12,10 @@ public class FactoryPatternExampleJavaApplication {
 	public static void main(String[] args) {
 
 		InsuranceFactory insuranceFactory = new InsuranceFactoryImpl();
-		Insurance insurance = insuranceFactory.create("AUTO_INSURANCE");
-		Insurance insuranceAuto = insuranceFactory.create("LIFE_INSURANCE");
-		System.out.println(insurance.getDescription());
-		System.out.println(insuranceAuto.getDescription());
+		Insurance lifeInsurance = insuranceFactory.create("AUTO_INSURANCE");
+		Insurance autoInsuranceAuto = insuranceFactory.create("LIFE_INSURANCE");
+		System.out.println(lifeInsurance.getId() + " - " + lifeInsurance.getDescription());
+		System.out.println(autoInsuranceAuto.getId() + " - " + autoInsuranceAuto.getDescription());
 
 	}
 
